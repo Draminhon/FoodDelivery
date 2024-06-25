@@ -1,11 +1,11 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:fooddelivery/pages/home/icon_and_text_widger.dart';
 import 'package:fooddelivery/utils/dimensions.dart';
+import 'package:fooddelivery/widgets/app_column.dart';
 import 'package:fooddelivery/widgets/big_text.dart';
 import 'package:fooddelivery/widgets/small_text.dart';
-import 'package:get/get.dart';
+
 
 class FoodPageBody extends StatefulWidget {
   const FoodPageBody({super.key});
@@ -235,69 +235,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                   BoxShadow(color: Colors.white, offset: Offset(-5, 0)),
                   BoxShadow(color: Colors.white, offset: Offset(5, 0))
                 ]),
-            child: Container(
-                padding: EdgeInsets.only(
-                    top: Dimensions.height15, left: 15, right: 15),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    BigText(text: 'Cachaça Jambu'),
-                    SizedBox(
-                      height: Dimensions.height5,
-                    ),
-                    Row(
-                      children: [
-                        Wrap(
-                          children: List.generate(
-                              5,
-                              (index) => const Icon(
-                                    Icons.star,
-                                    color: Colors.blue,
-                                    size: 15,
-                                  )),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        SmallText(text: '4.5'),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        SmallText(text: '195'),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        SmallText(text: 'comentários'),
-                        const SizedBox(
-                          height: 20,
-                        )
-                      ],
-                    ),
-                    SizedBox(
-                      height: Dimensions.height5,
-                    ),
-                    const Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        IconAndTextWidget(
-                          icon: Icons.circle_sharp,
-                          text: "Normal",
-                          iconColor: Colors.yellow,
-                        ),
-                        IconAndTextWidget(
-                          icon: Icons.location_on,
-                          text: "1.7km",
-                          iconColor: Colors.blue,
-                        ),
-                        IconAndTextWidget(
-                          icon: Icons.access_time_rounded,
-                          text: "Normal",
-                          iconColor: Colors.red,
-                        )
-                      ],
-                    ),
-                  ],
-                )),
+            child: AppColumn(text: 'Cachaça Jambu',)
           ),
         ),
       ]),
