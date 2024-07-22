@@ -7,7 +7,9 @@ import 'big_text.dart';
 
 class AppColumn extends StatelessWidget {
   final String text;
-  const AppColumn({super.key, required this.text});
+  final int stars;
+  final String location;
+  const AppColumn({super.key, required this.text, this.stars = 5, required this.location});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +24,7 @@ class AppColumn extends StatelessWidget {
                       children: [
                         Wrap(
                           children: List.generate(
-                              5,
+                              stars,
                               (index) => const Icon(
                                     Icons.star,
                                     color: Colors.blue,
@@ -49,22 +51,22 @@ class AppColumn extends StatelessWidget {
                     SizedBox(
                       height: Dimensions.height5,
                     ),
-                    const Row(
+                   const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         IconAndTextWidget(
                           icon: Icons.circle_sharp,
-                          text: "Normal",
+                           text: "Normal",
                           iconColor: Colors.yellow,
                         ),
                         IconAndTextWidget(
                           icon: Icons.location_on,
-                          text: "1.7km",
+                          text: '3.6km',
                           iconColor: Colors.blue,
                         ),
                         IconAndTextWidget(
                           icon: Icons.access_time_rounded,
-                          text: "Normal",
+                          text: "32min",
                           iconColor: Colors.red,
                         )
                       ],

@@ -16,7 +16,6 @@ this.height = 1.2,
   Widget build(BuildContext context) {
     return Text(
        text!,
-       
        style: TextStyle(color: color, fontFamily: 'Roboto', fontSize: size, height: height,),
        textAlign: textalign,
     );
